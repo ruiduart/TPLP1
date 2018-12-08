@@ -9,12 +9,17 @@ Numero de aluno:	15831
 
 
 int somaPares(numero) {
+
 	int i = 0;
 	int somatorio = 0;
+	// como inicio do intrevalo é zero , basta incrementar em 2 para somar apenas os pares
 
 	while (i <= numero) {
 		somatorio += i;
 		i += 2;
 	}
+
+	
+
 	return somatorio;
 }
