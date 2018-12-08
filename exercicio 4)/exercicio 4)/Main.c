@@ -20,19 +20,25 @@ int main() {
 	int maiorMultiplicado;
 	int produtoFinal;
 	int capicuaMaior = 100;
+	int count = 0;
 
 	while (numero1 < 1000) {
 
 
 		while (numero2 < 1000) {
 			produto = numero1 * numero2;
+			count++;
 
 			produtoFinal = produto;
-			while (produto != 0)
-			{
+
+			// ciclo while inverte o numero para depois comparar com ele proprio
+			while (produto >= 1)
+			{	
 				resto = produto % 10;
 				numeroInverso = numeroInverso * 10 + resto;
+				//numero inteiro produto ignora a parte decimal
 				produto /= 10;
+
 			}
 
 			if (numeroInverso == produtoFinal) {
@@ -56,6 +62,7 @@ int main() {
 
 		numero1++;
 		numero2 = 101;
+		
 	}
 	printf("maior multiplicador = %d\nmaior multiplicado = %d\n", maiorMultiplicador, maiorMultiplicado);
 	printf("A maior capicua possivel e %d", capicuaMaior);
