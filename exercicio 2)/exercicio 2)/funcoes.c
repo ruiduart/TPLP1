@@ -38,20 +38,28 @@ int tipoConta(tipo) {
 	
 			// verifica o valor de tipo e apresenta o tipo de conta correspondente
 
-	if (tipo == 1) {
+
+	switch (tipo)
+	{
+	case 1 :
 		printf("Empresarial Gold\n");
-	}
-	if (tipo == 2) {
+		break;
+	case 2 : 
 		printf("Empresarial Silver\n");
-	}
-	if (tipo == 3) {
+		break;
+	case 3 :
 		printf("Particular Gold\n");
-	}
-	if (tipo == 4) {
+		break;
+	case 4 :
 		printf("Particular Silver\n");
+		break;
+	case 5 :
+		printf("Outro\n");	
+		break;
+	default :
+		printf("Conta invalida");
+		break;
 	}
-	if (tipo == 5) {
-		printf("Outro\n");
-	}
+
 
 }
